@@ -1,0 +1,152 @@
+// Variables
+$color-primary: #F38160;
+$color-secondary: #FFC107;
+$color-text: #403C39;
+$color-text-light: #666666;
+$color-background: #FFFFFF;
+$color-background-light: #F9F9F9;
+$color-border: #E0E0E0;
+
+// Fonts
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Breakpoints
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+// Mixins
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-style {
+  background-color: $color-background;
+  border-radius: 8px;
+  padding: $spacing-md;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-text;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+// Typography
+h1, .h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-family: $font-secondary;
+}
+
+h2, .h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+} 

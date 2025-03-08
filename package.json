@@ -1,0 +1,34 @@
+{
+  "name": "grocery-store",
+  "version": "1.0.0",
+  "description": "Grocery Store - Your online grocery store",
+  "private": true,
+  "keywords": [
+    "grocery",
+    "online store",
+    "ecommerce"
+  ],
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --mode development",
+    "build": "webpack --mode production",
+    "sass": "sass sass/main.scss:css/optimized-style.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.5.3",
+    "sass": "^1.85.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  }
+}

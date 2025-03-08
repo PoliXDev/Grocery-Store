@@ -1,0 +1,154 @@
+@mixin breakpoint($point) {
+  @if $point == largedesktop {
+    @media (max-width: 1920px) and (min-width: 1441px) {
+      @content;
+    }
+  }
+  @if $point == desktop {
+    @media (max-width: 1440px) and (min-width: 1025px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: 1024px) and (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == tabletmobile {
+    @media (max-width: 1024px) and (min-width: 320px) {
+      @content;
+    }
+  } @else if $point == mobileandrotate {
+    @media (max-width: 767px) and (min-width: 320px) {
+      @content;
+    }
+  } @else if $point == mobilerotate {
+    @media (max-width: 767px) and (min-width: 479px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 480px) and (min-width: 320px) {
+      @content;
+    }
+  } @else if $point == smallmobile {
+    @media (max-width: 650px) and (min-width: 568px) {
+      @content;
+    }
+  } @else if $point == rotate {
+    @media (max-height: 550px) and (min-height: 0) {
+      @content;
+    }
+  }
+}
+
+// Media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) { @content; }
+  } @else if $breakpoint == sm {
+    @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+}
+
+@mixin respond-above($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: $breakpoint-xs) { @content; }
+  } @else if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs - 1) { @content; }
+  } @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm - 1) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md - 1) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg - 1) { @content; }
+  }
+}
+
+// Flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Grid
+@mixin grid($columns: 1, $gap: $spacing-md) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Positioning
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// Typography
+@mixin font-style($size: $font-size-base, $weight: $font-weight-regular, $line-height: 1.5) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+// Transitions
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Buttons
+@mixin button-style($bg-color, $text-color, $hover-bg-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: $border-radius-sm;
+  padding: $spacing-sm $spacing-lg;
+  cursor: pointer;
+  @include transition;
+  
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+}
+
+// Cards
+@mixin card-style($padding: $spacing-md, $bg-color: $color-background, $shadow: $shadow-sm) {
+  background-color: $bg-color;
+  border-radius: $border-radius-md;
+  padding: $padding;
+  box-shadow: $shadow;
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}

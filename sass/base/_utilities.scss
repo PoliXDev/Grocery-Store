@@ -1,0 +1,282 @@
+/* Utilities
+   ========================================================================== */
+
+// Spacing utilities
+@each $size, $value in (
+  'xs': $spacing-xs,
+  'sm': $spacing-sm,
+  'md': $spacing-md,
+  'lg': $spacing-lg,
+  'xl': $spacing-xl,
+  'xxl': $spacing-xxl
+) {
+  // Margin
+  .m-#{$size} {
+    margin: $value;
+  }
+  
+  .mt-#{$size} {
+    margin-top: $value;
+  }
+  
+  .mr-#{$size} {
+    margin-right: $value;
+  }
+  
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+  
+  .ml-#{$size} {
+    margin-left: $value;
+  }
+  
+  .mx-#{$size} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  
+  .my-#{$size} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  
+  // Padding
+  .p-#{$size} {
+    padding: $value;
+  }
+  
+  .pt-#{$size} {
+    padding-top: $value;
+  }
+  
+  .pr-#{$size} {
+    padding-right: $value;
+  }
+  
+  .pb-#{$size} {
+    padding-bottom: $value;
+  }
+  
+  .pl-#{$size} {
+    padding-left: $value;
+  }
+  
+  .px-#{$size} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  
+  .py-#{$size} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
+
+// Margin auto
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+// Display utilities
+.d-none {
+  display: none;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+// Flex utilities
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+// Width and height
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+// Position
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+// Visibility
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+// Overflow
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+// Background
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.bg-secondary {
+  background-color: $color-secondary;
+}
+
+.bg-light {
+  background-color: $color-background-light;
+}
+
+.bg-white {
+  background-color: $color-background;
+}
+
+// Border
+.border {
+  border: 1px solid $color-border;
+}
+
+.border-top {
+  border-top: 1px solid $color-border;
+}
+
+.border-right {
+  border-right: 1px solid $color-border;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-border;
+}
+
+.border-left {
+  border-left: 1px solid $color-border;
+}
+
+.rounded {
+  border-radius: $border-radius-sm;
+}
+
+.rounded-md {
+  border-radius: $border-radius-md;
+}
+
+.rounded-lg {
+  border-radius: $border-radius-lg;
+}
+
+.rounded-circle {
+  border-radius: $border-radius-circle;
+}
+
+// Shadow
+.shadow-sm {
+  box-shadow: $shadow-sm;
+}
+
+.shadow-md {
+  box-shadow: $shadow-md;
+}
+
+.shadow-lg {
+  box-shadow: $shadow-lg;
+} 

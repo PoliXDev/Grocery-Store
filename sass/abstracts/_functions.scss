@@ -1,0 +1,69 @@
+/* Functions
+   ========================================================================== */
+
+// Convert px to rem
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+// Convert px to em
+@function em($pixels, $context: 16) {
+  @return ($pixels / $context) * 1em;
+}
+
+// Strip unit
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// Color functions
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// Z-index function
+@function z($name) {
+  @if map-has-key($z-layers, $name) {
+    @return map-get($z-layers, $name);
+  }
+  
+  @warn "No z-index found for `#{$name}` in $z-layers map.";
+  @return null;
+}
+
+// Map deep get
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// Responsive breakpoint
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - .02, null);
+}
+
+// Get color from palette
+@function color($color-name, $color-variant: null) {
+  @if ($color-variant != null) {
+    @return map-get(map-get($color-palette, $color-name), $color-variant);
+  } @else {
+    @return map-get($color-palette, $color-name);
+  }
+}
+
+

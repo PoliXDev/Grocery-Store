@@ -1,0 +1,178 @@
+/* Home Page
+   ========================================================================== */
+
+// Hero section
+.hero {
+  padding: $spacing-xxl 0;
+  background-color: $color-background-light;
+  overflow: hidden;
+  
+  .container {
+    @include flex(row, space-between, center);
+    
+    @include respond-below(md) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+    padding-right: $spacing-xl;
+    
+    @include respond-below(md) {
+      padding-right: 0;
+      margin-bottom: $spacing-xl;
+    }
+    
+    .search-box {
+      margin-top: $spacing-lg;
+      max-width: 400px;
+      margin-bottom: $spacing-lg;
+      
+      @include respond-below(md) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    .features__grid {
+      max-width: 400px;
+      @include grid(2, $spacing-md);
+      margin-bottom: $spacing-lg;
+      
+      @include respond-below(md) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      @include respond-below(sm) {
+        @include grid(2, $spacing-sm);
+      }
+    }
+  }
+  
+  &__title {
+    margin-bottom: $spacing-md;
+    color: $color-text;
+    font-family: $font-secondary;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xxlarge;
+    line-height: 1.2;
+    
+    &-highlight {
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+    
+    @include respond-below(md) {
+      font-size: $font-size-xlarge;
+    }
+  }
+  
+  &__text {
+    font-size: $font-size-medium;
+    color: $color-text-light;
+    margin-bottom: $spacing-lg;
+    font-family: $font-primary;
+  }
+  
+  &__image {
+    flex: 1;
+    
+    img {
+      max-width: 100%;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+    }
+  }
+}
+
+// Feature card
+.feature-card {
+  @include card-style;
+  padding: $spacing-sm $spacing-md;
+  @include transition;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-sm;
+  min-height: 40px;
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-3px);
+  }
+  
+  &__icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+  
+  &__text {
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-small;
+    line-height: 1.2;
+  }
+}
+
+// Categories section
+.categories {
+  padding: $spacing-xxl 0;
+  
+  &__grid {
+    @include grid(5, $spacing-lg);
+    
+    @include respond-below(lg) {
+      @include grid(3, $spacing-lg);
+    }
+    
+    @include respond-below(md) {
+      @include grid(2, $spacing-md);
+    }
+    
+    @include respond-below(sm) {
+      @include grid(1, $spacing-md);
+    }
+  }
+}
+
+// Products section
+.products {
+  padding: $spacing-xxl 0;
+  
+  &__header {
+    @include flex(row, space-between, center);
+    margin-bottom: $spacing-xl;
+    
+    @include respond-below(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .btn {
+        margin-top: $spacing-md;
+      }
+    }
+  }
+  
+  &__grid {
+    @include grid(4, $spacing-lg);
+    
+    @include respond-below(lg) {
+      @include grid(3, $spacing-lg);
+    }
+    
+    @include respond-below(md) {
+      @include grid(2, $spacing-md);
+    }
+    
+    @include respond-below(sm) {
+      @include grid(1, $spacing-md);
+    }
+  }
+}
