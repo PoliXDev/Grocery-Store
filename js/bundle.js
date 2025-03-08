@@ -1,0 +1,1 @@
+console.log("Grocery Store app initialized"),document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector(".shopping-bag__count"),t=document.querySelectorAll(".feature-card");t.length>0&&t.forEach((t=>{t.addEventListener("click",(function(){const t=parseInt(e.textContent)||0;e.textContent=t+1}))}))}));
