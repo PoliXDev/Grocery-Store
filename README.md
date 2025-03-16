@@ -1,19 +1,19 @@
 # Grocery Store
 
-Un proyecto de estudio para una tienda de comestibles en línea. Diseñado como una página de aterrizaje simple y moderna.
+A study project for an online grocery store. Designed as a simple and modern landing page.
 
-## Estructura del Proyecto
+## Project Structure
 
-- `index.html` - Página principal
-- `css/optimized-style.css` - Estilos CSS optimizados
-- `js/app.js` - JavaScript simple para interactividad básica
-- `img/` - Imágenes y recursos gráficos
-- `sass/` - Archivos fuente de Sass organizados en una estructura simplificada
+- `index.html` - Main page  
+- `css/optimized-style.css` - Optimized CSS styles  
+- `js/app.js` - Simple JavaScript for basic interactivity  
+- `img/` - Images and graphic resources  
+- `sass/` - Sass source files organized in a simplified structure  
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- HTML5
-- CSS3 / Sass
-- JavaScript
-- Webpack
-- GitHub Pages
+- HTML5  
+- CSS3 / Sass  
+- JavaScript  
+- Webpack  
+- GitHub Pages 
