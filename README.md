@@ -30,15 +30,6 @@ This project is a study case for an online grocery store, featuring a modern lan
 - Webpack
 - GitHub Pages
 
-## Project Structure
-
-- `index.html` - Main landing page
-- `css/optimized-style.css` - Optimized CSS styles
-- `js/app.js` - Basic JavaScript for interactivity
-- `img/` - Images and graphic resources
-- `sass/` - Source Sass files organized in a simplified structure
-
-
 ## Contact
 
 Daniel Ruiz Poli
