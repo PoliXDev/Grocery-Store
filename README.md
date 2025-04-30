@@ -1,4 +1,4 @@
-![capture](./grocerystore.png)
+![capture](/grocerystore.png)
 
 ![FinestMart Logo](./img/finestmart_logo.png)
 
